@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #EEF5FF;
+    width: 100%;
+    overflow-x: hidden;
+}
+h2{
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* main section */
+.recipe-container{
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    place-items: center;
+}
+
+.recipe{
+    background-color: black;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 350px;
+}
+.recipe img{
+    height: 300px;
+}
+.recipe h3{
+    font-size: 24px;
+}
+.recipe p{
+    font-size: 20px;
+    margin: 5px 0;
+}
+.recipe button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+    background-color: #850F8D;
+    color: white;
+    border: none;
+    outline: none;
+
+}
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%,-50%);
+    background-color: #31363F;
+    border-radius: 10px;
+    width: 50%;
+    height: 70%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+    color: white;
+}
+
+.recipeName{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+}
+
+.ingredientList li{
+    margin-bottom: 10px;
+}
+
+.recipeInstructions p{
+    line-height: 30px;
+    white-space: pre-line;
+}
+
+.recipe-details-content{
+    padding: 25px;
+}
+
+.recipe-details::-webkit-scrollbar{
+    width: 7px;
+}
+.recipe-details::-webkit-scrollbar-thumb{
+    background-color: gainsboro;
+    border-radius: 15px;
+    --webkit-border-radius:15px;
+}
+
+.recipe-close-btn{
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #850F8D;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+}
+.recipe :hover{
+    transform: scale(1.1);
+}
+.btn{
+    background-color: #850F8D;
+    color: white;
+}
